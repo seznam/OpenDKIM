@@ -1,0 +1,40 @@
+Source: szn-email-opendkim
+Section: mail
+Priority: optional
+Maintainer: Email team <fesaci@firma.seznam.cz>
+Build-Depends: debhelper, pkg-config, libmilter-dev, libdb-dev,
+ libunbound-dev [linux-any], libldap2-dev, liblua5.1-0-dev, libbsd-dev,
+ libopendbx1-dev [linux-any kfreebsd-any], libssl-dev, libsasl2-dev,
+ libmemcached-dev
+Standards-Version: 4.5.0
+Homepage: http://www.opendkim.org/
+Vcs-Browser: https://github.com/seznam/OpenDKIM
+Vcs-Git: https://github.com/seznam/OpenDKIM.git
+
+Package: szn-email-libopendkim11
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: DomainKeys Identified Mail (DKIM) library
+ The OpenDKIM Project is a community effort to develop and maintain a C library
+ for producing DKIM-aware applications and an open source milter for providing
+ DomainKeys Identified Mail (DKIM) service.
+ .
+ This package provides library for implementing signing and verification of the
+ DomainKeys Identified Mail (DKIM) standard. This library provides support for
+ signing and verifying signatures according to RFC 4871, and supports both
+ DomainKeys signing policy and DKIM ADSP.
+
+Package: szn-email-libopendkim-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: szn-email-libopendkim11 (= ${binary:Version}), ${misc:Depends}
+Description: DomainKeys Identified Mail (DKIM) library (development files)
+ The OpenDKIM Project is a community effort to develop and maintain a C library
+ for producing DKIM-aware applications and an open source milter for providing
+ DomainKeys Identified Mail (DKIM) service.
+ .
+ This package provides the required header files and development libraries for
+ developing against the OpenDKIM library.

@@ -1,0 +1,5 @@
+szn-email-opendkim (2.11.0~beta2+szn-0) unstable; urgency=medium
+
+  * (Init) Debian package of upstream development branch, the 'debian' folder with packaging rules taken from https://salsa.debian.org/debian/opendkim/ renamed and backported to debian stretch.
+
+ -- hz-mk <51707958+hz-mk@users.noreply.github.com>  Wed, 7 Apr 2021 15:15:30 +0200
